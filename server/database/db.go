@@ -12,7 +12,7 @@ import (
 func DbInstance() *mongo.Client {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatalln("Failed to load .env file")
+		log.Println("Failed to load .env file")
 	}
 
 	// MongoDbUri := os.Getenv("MONGO_DB_URI")
@@ -38,7 +38,7 @@ func DbInstance() *mongo.Client {
 func OpenCollection(collectionName string, client *mongo.Client) *mongo.Collection {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("failed to load .env file")
+		log.Println("failed to load .env file")
 	}
 
 	dbName := os.Getenv("DB_NAME")
