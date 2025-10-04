@@ -34,11 +34,11 @@ func main() {
 			log.Println("Allowed Origin:", origins[i])
 		}
 	} else {
-		origins = []string{"http://localhost:5173", "https://imdb-clone-opal-eta.vercel.app/"}
+		origins = []string{"http://localhost:5173", "https://imdb-clone-opal-eta.vercel.app"}
 		log.Println("Allowed Origin: http://localhost:5173")
 	}
 
-	origins = append(origins, "https://imdb-clone-opal-eta.vercel.app/")
+	origins = append(origins, "https://imdb-clone-opal-eta.vercel.app")
 
 	// Apply CORS middleware
 	router.Use(cors.New(cors.Config{
